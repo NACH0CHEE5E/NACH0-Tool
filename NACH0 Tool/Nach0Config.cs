@@ -23,15 +23,23 @@ namespace NACH0
         public const string ModFolder = ModsFolder + "/" + Name + "/" + ModName;
         public const string ModGamedataFolder = ModFolder + "/gamedata";
         public const string ModIconFolder = ModGamedataFolder + "/textures/icons/";
-        public static bool GuardsMod = true;
+        public static bool GuardsMod = false;
 
         [ModLoader.ModCallback(ModLoader.EModCallbackType.AfterModsLoaded, Name + ".AfterModsLoaded.ModCheck")]
         public void AfterModsLoaded(List<ModLoader.ModDescription> list)
         {
-            
-            foreach (var mod in list.Where(m => m.name == Name + ".Guards"))
+
+            foreach (var mod in list)
             {
-                GuardsMod = true;
+                if (mod.modJSON != null)
+                {
+                    Pipliz.Log.Write(mod.modJSON.ToString());
+                    if (mod.name.ToString() == Name + ".Guards")
+                    {
+                        GuardsMod = true;
+                    }
+                }
+                
             }
         }
     }
