@@ -38,7 +38,7 @@ namespace NACH0.CommandTool
     [ModLoader.ModManager]
     public class SendCommandUI
     {
-        static readonly localization.LocalizationHelper _localizationHelper = new localization.LocalizationHelper(Nach0Config.Name + ".CommandTool");
+        static readonly localization.LocalizationHelper _localizationHelper = new localization.LocalizationHelper("CommandTool");
         public static void SendUI(Players.Player player)
         {
             NetworkMenu commandUI = new NetworkMenu();

@@ -1,0 +1,36 @@
+[{
+	"name": "NACH0.Tool",
+	"version": "1.0.0",
+	"namepretty": "NACH0's Tool",
+	"dllpath": "Tool.dll",
+	"enabled": true,
+	"marksgamemodded": true,
+	"compatibleversions": [
+		"0.7.0"
+	],
+	"jsonFiles": [
+		{
+			"fileType": "addNewTypes",
+			"index": 10000,
+			"relativePath": "gamedata/types/Tool.json"
+		},
+		{
+			"fileType": "addOrReplacePlayerRecipes",
+			"index": 15000,
+			"relativePath": "gamedata/recipes/Player.json"
+		},
+		{
+			"fileType": "addOrOverrideLocalization",
+			"index": 15000,
+			"relativePath": "gamedata/locale/en-US/en-US.json"
+		}
+	],
+	"patchnotes": [{
+		"version": "1.0.0",
+		"notes": [
+			"Initial Release",
+			"*If you find any issues or have suggestions join the discord",
+			"*discord.gg/tqFhxhm"
+		]
+	}]
+}]

@@ -24,7 +24,7 @@ namespace NACH0
         public const string ModFolder = ModsFolder + "/" + Name + "/" + ModName;
         public const string ModGamedataFolder = ModFolder + "/gamedata";
         public const string ModIconFolder = ModGamedataFolder + "/textures/icons/";
-        public static bool GuardsMod = false;
+        public static bool GuardsMod = true;
 
         [ModLoader.ModCallback(ModLoader.EModCallbackType.AfterModsLoaded, Name + ".AfterModsLoaded.ModCheck")]
         public void AfterModsLoaded(List<ModLoader.ModDescription> list)
