@@ -7,6 +7,7 @@ using Pipliz;
 
 namespace NACH0
 {
+    [ModLoader.ModManager]
     public class Nach0Config
     {
         public const string Name = "NACH0";
@@ -33,7 +34,7 @@ namespace NACH0
             {
                 if (mod.modJSON != null)
                 {
-                    Pipliz.Log.Write(mod.modJSON.ToString());
+                    Log.Write(mod.modJSON.ToString());
                     if (mod.name.ToString() == Name + ".Guards")
                     {
                         GuardsMod = true;
